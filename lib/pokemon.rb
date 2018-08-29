@@ -10,12 +10,12 @@ class Pokemon
     Pokemon.new(id: pokemon_info[0], name: pokemon_info[1], type: pokemon_info[2], hp: pokemon_info[3], db: db)
   end
 
-  def initialize(id:, name:, type:, db:, hp:)
-    @id = id,
-    @name = name,
-    @type = type,
-    @db = db,
-    @hp = hp
+  def initialize(id:, name:, type:, hp: nil, db:)
+    @id = id, 
+    @name = name, 
+    @type = type, 
+    @hp = hp, 
+    @db = db
   end
 
   def alter_hp(new_hp, db)
